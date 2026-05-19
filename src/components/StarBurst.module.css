@@ -1,0 +1,41 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  pointer-events: none;
+  animation: fadeOut 1.5s forwards;
+}
+
+.icon {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.9));
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.label {
+  position: absolute;
+  top: 28%;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 0 #1a1a1a;
+  animation: floatUp 1.5s forwards;
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0);    opacity: 1; }
+  to   { transform: translateY(-40px); opacity: 0; }
+}
